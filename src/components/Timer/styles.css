@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main h1 {
+  font-family: "Courier New", Courier, monospace;
+  padding: 3rem;
+  border: 3px solid #cce3de;
+  border-radius: 40%;
+  margin-bottom: 3rem;
+}
+
+main #buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #buttons button {
+  margin: 0 2rem;
+  padding: 1.5rem;
+  background-color: #cce3de;
+  border: none;
+  border-radius: 20%;
+  color: #3b3b3b;
+  font-size: 20px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+main #buttons button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+main #partial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #partial ul {
+  display: flex;
+}
+
+main #partial ul li {
+  margin: 0 1.7rem;
+  color: #3b3b3b;
+}
