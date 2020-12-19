@@ -43,11 +43,16 @@ main #partial {
   align-items: center;
 }
 
-main #partial ul {
+main #partial ol {
   display: flex;
+  flex-direction: column;
 }
 
-main #partial ul li {
-  margin: 0 1.7rem;
+main #partial ol li {
+  margin: 0.2rem 1.7rem;
   color: #3b3b3b;
+}
+
+main #partial ol li:last-child {
+  margin-bottom: 3rem;
 }

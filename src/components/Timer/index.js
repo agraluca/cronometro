@@ -70,20 +70,17 @@ function Timer() {
                 `${time.hour}:${time.min}:${time.sec}`,
               ]);
             }
-            console.log(partials);
           }}
         >
           Parcial
         </button>
       </div>
       <div id="partial">
-        {partials.map((partial) => {
-          return (
-            <ul>
-              <li key={partial}>{partial}</li>
-            </ul>
-          );
-        })}
+        <ol>
+          {partials.map((partial, index) => {
+            return <li key={index}>{partial}</li>;
+          })}
+        </ol>
       </div>
     </main>
   );
