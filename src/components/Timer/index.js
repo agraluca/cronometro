@@ -9,7 +9,7 @@ function Timer() {
     sec: "00",
     min: "00",
     hour: "00",
-    counter: 0,
+    counter: 3590,
   });
 
   const [partials, setPartials] = useState([]);
@@ -20,7 +20,7 @@ function Timer() {
       interval = setInterval(() => {
         const secondCounter = time.counter % 60;
 
-        const minuteCounter = Math.floor(time.counter / 60);
+        const minuteCounter = Math.floor((time.counter / 60) % 60);
         const hourCounter = Math.floor(time.counter / 3600);
 
         const computedSecond =
