@@ -2,6 +2,7 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 3rem;
   background-color: #59886e;
   margin-bottom: 3rem;
@@ -9,8 +10,14 @@ header nav {
 
 header nav h1 {
   font-family: "Courier New", Courier, monospace;
-
   text-transform: uppercase;
   font-size: 2rem;
+  color: #fff;
+}
+
+header nav h2 {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  font-size: 1.4rem;
   color: #fff;
 }
