@@ -9,7 +9,7 @@ function Timer() {
     sec: "00",
     min: "00",
     hour: "00",
-    counter: 3590,
+    counter: 0,
   });
 
   const [partials, setPartials] = useState([]);
