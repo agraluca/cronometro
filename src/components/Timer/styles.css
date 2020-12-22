@@ -20,6 +20,7 @@ main #buttons {
 }
 
 main #buttons button {
+  outline: none;
   margin: 0 2rem;
   padding: 1.5rem;
   background-color: #cce3de;

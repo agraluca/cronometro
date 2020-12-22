@@ -5,6 +5,7 @@ import "./styles.css";
 function Timer() {
   const [startStop, setStartStop] = useState(false);
   const [totalTime, setTotalTime] = useState("00:00:00");
+  const [message, setMessage] = useState("");
   const [time, setTime] = useState({
     sec: "00",
     min: "00",
@@ -12,9 +13,10 @@ function Timer() {
   });
   function getTimer() {
     const timeArray = totalTime.split(":");
-    const seconds = timeArray.length === 2 ? "00" : timeArray[2];
+    const seconds = timeArray[2];
     const minutes = timeArray[1];
     const hour = timeArray[0];
+    console.log(seconds, minutes, hour);
     setTime({ sec: seconds, min: minutes, hour: hour });
   }
 
@@ -42,6 +44,8 @@ function Timer() {
           hour = 0;
           seconds = 0;
           minutes = 0;
+
+          setMessage("Time is Over");
           setStartStop(false);
         }
 
@@ -60,11 +64,12 @@ function Timer() {
     }
 
     return () => clearInterval(interval);
-  }, [startStop, time.sec, time.min, time.hour]);
+  }, [startStop, time.sec, time.min, time.hour, message]);
 
   return (
     <main>
       <h1>{`${time.hour}:${time.min}:${time.sec}`}</h1>
+      <h2>{message}</h2>
       <div id="timerInverted">
         <input
           type="time"
@@ -78,16 +83,27 @@ function Timer() {
         <button
           onClick={() => {
             getTimer();
-            setStartStop(!startStop);
+            setStartStop(true);
+            setMessage("");
           }}
         >
-          {startStop ? "Pause" : "Start"}
+          Start
+        </button>
+
+        <button
+          onClick={() => {
+            setStartStop(!startStop);
+            setMessage("");
+          }}
+        >
+          {startStop ? "Pause" : "Voltar"}
         </button>
 
         <button
           onClick={() => {
             setStartStop(false);
-            setTime({ sec: "00", min: "00", hour: "00", count: 0 });
+            setTime({ sec: "00", min: "00", hour: "00" });
+            setMessage("");
           }}
         >
           Zerar

@@ -13,6 +13,11 @@ main h1 {
   margin-bottom: 3rem;
 }
 
+main h2 {
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+}
+
 main #buttons {
   display: flex;
   justify-content: center;
@@ -20,6 +25,7 @@ main #buttons {
 }
 
 main #buttons button {
+  outline: none;
   margin: 0 2rem;
   padding: 1.5rem;
   background-color: #cce3de;
@@ -39,4 +45,15 @@ main #buttons button:hover {
 
 main #timerInverted {
   margin-bottom: 2rem;
+}
+
+main #timerInverted input {
+  border: 1px solid #ccc;
+  color: #888;
+  margin: 0.5em;
+  vertical-align: middle;
+  outline: 0;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-family: sans-serif;
 }
