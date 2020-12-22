@@ -13,10 +13,10 @@ function Timer() {
   });
   function getTimer() {
     const timeArray = totalTime.split(":");
-    const seconds = timeArray[2];
+    const seconds = timeArray[2] === undefined ? "00" : timeArray[2];
     const minutes = timeArray[1];
     const hour = timeArray[0];
-    console.log(seconds, minutes, hour);
+
     setTime({ sec: seconds, min: minutes, hour: hour });
   }
 
